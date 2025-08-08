@@ -11,8 +11,25 @@ A RESTful API for managing events and bookings, built with Express.js and MongoD
 
 ### 🔏 Auth
 - `POST /api/auth/register` – Register a new user
+- ```json
+{
+  "name": "Bishal",
+  "email": "bishal@example.com",
+  "password": "secure123"
+}
+-response:
+{
+  "message": "User registered successfully"
+}
 - `POST /api/auth/login` – Log in and receive JWT
-
+-input {
+  "email": "bishal@example.com",
+  "password": "secure123"
+}
+response:
+{
+  "token": "your_jwt_token_here"
+}
 ### 📅 Events
 - `GET /api/events` – View all events (authenticated)
 - `POST /api/events` – Add event (admin only)
